@@ -14,7 +14,7 @@ melakukan aktivitas 𝐴 sebanyak 70.
 diatas
 Pertama, kita buat tabelnya menggunakan r terlebih dahulu
 ```
-tabel = data.frame(x = c(78,75,67,77,70,72,78,74,77),
+tabel <- data.frame(x = c(78,75,67,77,70,72,78,74,77),
 y = c(100,95,70,90,90,90,89,90,100))
 ```
 Kemudian, kita cari nilai selisih dan standar deviasi
@@ -41,16 +41,7 @@ dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan
 aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada
 pengaruh yang signifikan secara statistika dalam hal kadar saturasi
 oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
-Berdasarkan data, kadar saturasi oksigen sebelum dan sesudah adalah sebesar 67 dan 70. Kita hitung selisih dan besar tingkat signifikasinya terlebih dahulu
-```
-selisihresponden <- y[c(3)]-x[c(3)]
-peningkatan <- selisihresponden/x[c(3)] * 100
-```
-Hasil
-<img width="404" alt="no1c_a" src="https://user-images.githubusercontent.com/90702710/170870219-45312047-f999-4e42-9b4d-864f4c34b028.png">
-<img width="305" alt="no1c" src="https://user-images.githubusercontent.com/90702710/170870203-80d0940b-ea2d-4509-91e2-de7da9e2e732.png">
 
-Dikarenakan tingkat signifikansi sebesar 4.477612% dan P-Value sebesar 0.5642, hipotesis nol akan diterima
 
 ## 2
 Diketahui bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun.
