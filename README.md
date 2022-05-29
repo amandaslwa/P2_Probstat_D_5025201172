@@ -74,7 +74,7 @@ diatas. Asumsikan nilai variancenya sama, apakah ada perbedaan pada
 rata-ratanya (α= 0.05)
 
 ### a. H0 dan H1
-H0: μ Bali = μ Bandung (nilai rata-rata saham Bali sama dengan nilai rata-rata saham Bandung)
+H0: μ Bali = μ Bandung (nilai rata-rata saham Bali sama dengan nilai rata-rata saham Bandung) <br>
 H1: μ Bali ≠ μ Bandung (nilai rata-rata saham Bali tidak sama dengan nilai rata-rata saham Bandung)
 
 ### b.  Hitung Sampel Statistik
