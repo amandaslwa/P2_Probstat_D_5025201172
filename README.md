@@ -47,7 +47,7 @@ Untuk mengetahui kebenaran hipotesis nol, kita perlu menghitung nilai kritikalny
 qt(p = 0.025, df = 10.956, lower.tail = FALSE)
 ```
 Didapatkan hasil sebagai berikut <br>
-<img width="418" alt="no1c_b" src="https://user-images.githubusercontent.com/90702710/170872535-cf1a9625-e4dc-4fee-b3ce-3dfddb172685.png">
+<img width="368" alt="no1c_b" src="https://user-images.githubusercontent.com/90702710/170872726-adf164a2-44b1-4531-be2a-51b1b75add1a.png">
 <br>
 Karena hasil uji statistik (t) terletak di selang nilai kritikal, maka kita dapat menerima hipotesis nol
 
