@@ -125,7 +125,7 @@ Berdasarkan hasil pengujian, dapat disimpulkan bahwa rata-rata saham Bali dan Ba
 ## 4
 Seorang Peneliti sedang meneliti spesies dari kucing di ITS . Dalam penelitiannya ia mengumpulkan data tiga spesies kucing yaitu kucing oren, kucing hitam dan kucing putih dengan panjangnya masing-masing.
 <br>
-Jika : iketahui dataset https://intip.in/datasetprobstat1 <br>
+Jika : Diketahui dataset https://intip.in/datasetprobstat1 <br>
 #H0 : Tidak ada perbedaan panjang antara ketiga spesies atau rata-rata panjangnya sama
 
 ### a. Buatlah masing masing jenis spesies menjadi 3 subjek "Grup" (grup 1,grup 2,grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan lihat apakah ada outlier utama dalam homogenitas varians.
@@ -139,7 +139,7 @@ ggboxplot(kucing, x = "Group", y = "Length",
             ylab = "Length", xlab = "Group")
 ```
 Hasil plot <br>
-
+<img width="938" alt="no4a" src="https://user-images.githubusercontent.com/90702710/170875494-efa86e58-5658-4ba6-8332-95a5fb9cd40b.png">
 <br>
 (Tidak memiliki outlier)
 
@@ -150,7 +150,7 @@ library(onewaytests)
 bartlett.test(Length ~ Group, data = kucing)
 ```
 Didapatkan hasil sebagai berikut <br>
-
+<img width="357" alt="no4b" src="https://user-images.githubusercontent.com/90702710/170875549-731c9283-076a-46dc-a888-a37f4cf296e1.png">
 <br>
 
 ### c. Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus Grup dan beri nama model tersebut model 1.
@@ -160,17 +160,19 @@ model1 <- lm(formula = Group ~ Length, data = kucing)
 print(model1)
 ```
 Model <br>
-
+<img width="374" alt="no4c" src="https://user-images.githubusercontent.com/90702710/170875616-4b69cf8d-dabd-4473-ba43-2375a2ab4126.png">
 <br>
 
 ### d. Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan dari H0?
-Pengerjaan dilakukan dengan menggunakan rumus
-```
-summary(model1)$coefficients[2,4]
-```
-Didapatkan hasil sebagai berikut <br>
 
-<br>
+
+### e. Verifikasilah jawaban model 1 dengan Post-hoc test Tukey HSD, dari nilai p yang didapatkan apakah satu jenis kucing lebih panjang dari yang lain? Jelaskan.
+
+
+### f. Visualisasikan data dengan ggplot2
+
+
+
 ## 5
 Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk
 mengetahui pengaruh suhu operasi (100˚C, 125˚C dan 150˚C) dan tiga jenis kaca
