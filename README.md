@@ -14,8 +14,8 @@ melakukan aktivitas 𝐴 sebanyak 70.
 diatas
 Pertama, kita buat tabelnya menggunakan r terlebih dahulu
 ```
-tabel <- data.frame(x = c(78,75,67,77,70,72,78,74,77),
-y = c(100,95,70,90,90,90,89,90,100))
+x <- c(78,75,67,77,70,72,78,74,77)
+y <- c(100,95,70,90,90,90,89,90,100)
 ```
 Kemudian, kita cari nilai selisih dan standar deviasi
 ```
@@ -27,13 +27,14 @@ Didapatkan hasil sebagai berikut
 
 
 ### b. Carilah nilai t (p-value)
-Pengerjaan menggunakan library BSDA dengan rumus `z.test`
+Pengerjaan menggunakan library BSDA dengan rumus `t.test`
 ```
 library(BSDA)
-z.test(selisih, mu=15, sigma.x=standardeviasi)
+t.test(selisih, alternative = 'two.sided', mu=15, sigma.x=standardeviasi)
 ```
 Didapatkan hasil sebagai berikut
-<img width="429" alt="no1b" src="https://user-images.githubusercontent.com/90702710/170870197-6872de5e-9527-4b4b-a59f-9bf34b538a94.png">
+<img width="434" alt="no1b" src="https://user-images.githubusercontent.com/90702710/170871096-67cc7192-1ec1-49ea-ba27-d65af053e481.png">
+
 
 
 ### c. Tentukanlah apakah terdapat pengaruh yang signifikan secara statistika
