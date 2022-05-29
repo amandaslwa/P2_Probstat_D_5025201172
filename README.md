@@ -125,3 +125,76 @@ Hasil uji statistik (t) terletak di selang nilai kritikal, maka kita dapat mener
 
 ### f. Kesimpulan
 Berdasarkan hasil pengujian, dapat disimpulkan bahwa rata-rata saham Bali dan Bandung bernilai sama
+
+# 5
+Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk
+mengetahui pengaruh suhu operasi (100˚C, 125˚C dan 150˚C) dan tiga jenis kaca
+pelat muka (A, B dan C) pada keluaran cahaya tabung osiloskop. Percobaan
+dilakukan sebanyak 27 kali dan didapat data sebagai berikut: Data Hasil
+Eksperimen. Dengan data tersebut:
+
+### a. Buatlah plot sederhana untuk visualisasi data
+```
+library(readr)
+library(ggplot2)
+library(multcompView)
+library(dplyr)
+
+GTL <- read_csv("https://drive.google.com/u/0/uc?id=1aLUOdw_LVJq6VQrQEkuQhZ8FW43FemTJ&export=download")
+qplot(x = Temp, y = Light, geom = "point", data = GTL) +
+  facet_grid(.~Glass, labeller = label_both)
+```
+Hasil plot sederhana <br>
+<img width="959" alt="no5a" src="https://user-images.githubusercontent.com/90702710/170874214-cc6aaf69-b433-45f3-9f4c-25d79f6ab2f6.png">
+<br>
+
+### b. Lakukan uji ANOVA dua arah
+Uji ANOVA dilakukan dengan cara
+```
+GTL$Glass <- as.factor(GTL$Glass)
+GTL$Temp_Factor <- as.factor(GTL$Temp)
+
+anova <- aov(Light ~ Glass*Temp_Factor, data = GTL)
+print(anova)
+summary(anova)
+```
+Hasil uji <br>
+<img width="500" alt="no5b_a" src="https://user-images.githubusercontent.com/90702710/170874265-dd64943f-278b-4bca-adc4-c2bb883397d6.png">
+<br>
+<img width="471" alt="no5b" src="https://user-images.githubusercontent.com/90702710/170874282-08240d57-8e1e-4353-8ace-9aa33e015236.png">
+<br>
+
+### c. Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk
+setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi)
+Tabel ditampilkan dengan menggunakan `group_by`
+```
+data_sum <- group_by(GTL, Glass, Temp) %>%
+  summarise(mean=mean(Light), sd=sd(Light)) %>%
+  arrange(desc(mean))
+print(data_sum)
+```
+Tabel <br>
+<img width="318" alt="no5c" src="https://user-images.githubusercontent.com/90702710/170874363-8ba0920a-c65e-4f54-b17c-414fd883e1c1.png">
+<br>
+
+### d. Lakukan uji Tukey
+Uji Tukey dilakukan dengan cara
+```
+tukey <- TukeyHSD(anova)
+print(tukey)
+```
+Hasil uji <br>
+<img width="552" alt="no5d_a" src="https://user-images.githubusercontent.com/90702710/170874426-fae17611-2aa2-434e-9949-28f98430f9cc.png">
+<br>
+<img width="265" alt="no5d_b" src="https://user-images.githubusercontent.com/90702710/170874445-b44b1b41-fdfe-4026-b2ae-758550b73254.png">
+<br>
+
+### e. Gunakan compact letter display untuk menunjukkan perbedaan signifikan
+antara uji Anova dan uji Tukey
+```
+tukey.cld <- multcompLetters4(anova, tukey)
+print(tukey)
+cld <- as.data.frame.list(tukey.cld$`Glass:Temp_Factor`)
+data_summary$Tukey <- cld$Letters
+print(data_summary)
+```
