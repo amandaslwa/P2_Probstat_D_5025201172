@@ -42,21 +42,14 @@ dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan
 aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada
 pengaruh yang signifikan secara statistika dalam hal kadar saturasi
 oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
-Pertama, kita hitung sampel statistiknya dengan menggunakan library BSDA dengan rumus `tsum.test`
-```
-tsum.test(mean.x = mean(x), s.x = sd(x), n.x = 9, mean.y = mean(y), s.y = sd(y), n.y = 9, conf.level = 0.95)
-```
-Didapatkan hasil sebagai berikut <br>
-<img width="539" alt="no1c_a" src="https://user-images.githubusercontent.com/90702710/170872513-b70f7216-30ab-4df7-b3b7-05555a9d6bbf.png">
-<br>
-Kemudian, kita cari nilai kritikalnya dengan rumus
+Untuk mengetahui kebenaran hipotesis nol, kita perlu menghitung nilai kritikalnya terlebih dahulu
 ```
 qt(p = 0.025, df = 10.956, lower.tail = FALSE)
 ```
 Didapatkan hasil sebagai berikut <br>
 <img width="418" alt="no1c_b" src="https://user-images.githubusercontent.com/90702710/170872535-cf1a9625-e4dc-4fee-b3ce-3dfddb172685.png">
 <br>
-Karena hasil uji statistik (t) tidak terletak di selang nilai kritikal, maka kita dapat menolak hipotesis nol
+Karena hasil uji statistik (t) terletak di selang nilai kritikal, maka kita dapat menerima hipotesis nol
 
 ## 2
 Diketahui bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun.
