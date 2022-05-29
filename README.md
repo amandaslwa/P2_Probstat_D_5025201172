@@ -61,7 +61,7 @@ zsum.test(mean.x=23500, sigma.x=3900, n.x=100, alternative="greater", mu=20000)
 Didapatkan hasil sebagai berikut <br>
 <img width="455" alt="no2a" src="https://user-images.githubusercontent.com/90702710/170870211-89c558ca-0964-4172-877f-a359f84cc0a0.png">
 <br>
-Dengan kata lain, kita dapat setuju dengan klaim tersebut
+Dengan kata lain, kita dapat setuju dengan klaim tersebut karena nilai yang didapatkan sesuai dengan klaim yang dinyatakan (lebih dari 20.000)
 
 
 ### b. Jelaskan maksud dari output yang dihasilkan!
@@ -121,6 +121,56 @@ Hasil uji statistik (t) terletak di selang nilai kritikal, maka kita dapat mener
 ### f. Kesimpulan
 Berdasarkan hasil pengujian, dapat disimpulkan bahwa rata-rata saham Bali dan Bandung bernilai sama
 
+
+## 4
+Seorang Peneliti sedang meneliti spesies dari kucing di ITS . Dalam penelitiannya ia mengumpulkan data tiga spesies kucing yaitu kucing oren, kucing hitam dan kucing putih dengan panjangnya masing-masing.
+<br>
+Jika : iketahui dataset https://intip.in/datasetprobstat1 <br>
+#H0 : Tidak ada perbedaan panjang antara ketiga spesies atau rata-rata panjangnya sama
+
+### a. Buatlah masing masing jenis spesies menjadi 3 subjek "Grup" (grup 1,grup 2,grup 3). Lalu Gambarkan plot kuantil normal untuk setiap kelompok dan lihat apakah ada outlier utama dalam homogenitas varians.
+```
+kucing <- read.delim("https://rstatisticsandresearch.weebly.com/uploads/1/0/2/6/1026585/onewayanova.txt")
+
+library(ggpubr)
+
+ggboxplot(kucing, x = "Group", y = "Length", 
+          color = "Group",
+            ylab = "Length", xlab = "Group")
+```
+Hasil plot <br>
+
+<br>
+(Tidak memiliki outlier)
+
+### b. Carilah atau periksalah Homogeneity of variances nya , Berapa nilai p yang didapatkan? , Apa hipotesis dan kesimpulan yang dapat diambil ?
+Pengerjaan dilakukan dengan menggunakan rumus
+```
+library(onewaytests)
+bartlett.test(Length ~ Group, data = kucing)
+```
+Didapatkan hasil sebagai berikut <br>
+
+<br>
+
+### c. Untuk uji ANOVA (satu arah), buatlah model linier dengan Panjang versus Grup dan beri nama model tersebut model 1.
+Uji ANOVA dilakukan dengan menggunakan rumus
+```
+model1 <- lm(formula = Group ~ Length, data = kucing)
+print(model1)
+```
+Model <br>
+
+<br>
+
+### d. Dari Hasil Poin C, Berapakah nilai-p ? , Apa yang dapat Anda simpulkan dari H0?
+Pengerjaan dilakukan dengan menggunakan rumus
+```
+summary(model1)$coefficients[2,4]
+```
+Didapatkan hasil sebagai berikut <br>
+
+<br>
 ## 5
 Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk
 mengetahui pengaruh suhu operasi (100˚C, 125˚C dan 150˚C) dan tiga jenis kaca
