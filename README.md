@@ -22,7 +22,7 @@ Kemudian, kita cari nilai selisih dan standar deviasi
 selisih <- y-x
 standardeviasi <- sd(selisih)
 ```
-Didapatkan hasil sebagai berikut
+Didapatkan hasil sebagai berikut <br>
 <img width="323" alt="no1a" src="https://user-images.githubusercontent.com/90702710/170870191-ee347036-89cc-4df0-948f-bff90fcf75b2.png">
 
 
@@ -32,7 +32,7 @@ Pengerjaan menggunakan library BSDA dengan rumus `t.test`
 library(BSDA)
 t.test(selisih, alternative = 'two.sided', mu=15, sigma.x=standardeviasi)
 ```
-Didapatkan hasil sebagai berikut
+Didapatkan hasil sebagai berikut <br>
 <img width="434" alt="no1b" src="https://user-images.githubusercontent.com/90702710/170871096-67cc7192-1ec1-49ea-ba27-d65af053e481.png">
 
 
@@ -56,7 +56,7 @@ Pengerjaan menggunakan library BSDA dan menggunakan rumus `zsum.test` dengan mem
 library(BSDA)
 zsum.test(mean.x=23500, sigma.x=3900, n.x=100, alternative="greater", mu=20000)
 ```
-Didapatkan hasil sebagai berikut
+Didapatkan hasil sebagai berikut <br>
 <img width="455" alt="no2a" src="https://user-images.githubusercontent.com/90702710/170870211-89c558ca-0964-4172-877f-a359f84cc0a0.png">
 <br>
 Dengan kata lain, kita dapat setuju dengan klaim tersebut
@@ -86,7 +86,7 @@ Pengerjaan menggunakan library BSDA dengan rumus `tsum.test`
 library(BSDA)
 tsum.test(mean.x = 3.64, s.x = 1.67, n.x = 19, mean.y = 2.79, s.y = 1.32, n.y = 27, conf.level = 0.95)
 ```
-Didapatkan hasil sebagai berikut
+Didapatkan hasil sebagai berikut <br>
 <img width="537" alt="no3b" src="https://user-images.githubusercontent.com/90702710/170870255-7468d979-35a6-478c-8e36-4a2f4f5d0a9d.png">
 
 
@@ -100,7 +100,7 @@ x <- sqrt(x2)
 t <- (2.79 - 3.64)/(sp*x)
 
 ```
-Didapatkan hasil sebagai berikut
+Didapatkan hasil sebagai berikut <br>
 <img width="355" alt="no3c" src="https://user-images.githubusercontent.com/90702710/170870261-65ad08ce-d9e4-4051-bb7e-5cf7c7266e64.png">
 
 
@@ -109,7 +109,7 @@ Nilai kritikal dicari dengan menggunakan rumus
 ```
 qt(p = 0.025, df = 2, lower.tail = FALSE)
 ```
-Didapatkan hasil sebagai berikut
+Didapatkan hasil sebagai berikut <br>
 <img width="362" alt="no3d" src="https://user-images.githubusercontent.com/90702710/170870270-b7d24f67-75f9-4384-ba18-1e80332f6884.png">
 
 
