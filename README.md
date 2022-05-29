@@ -37,12 +37,7 @@ Didapatkan hasil sebagai berikut <br>
 
 
 
-### c. Tentukanlah apakah terdapat pengaruh yang signifikan secara statistika
-dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan
-aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada
-pengaruh yang signifikan secara statistika dalam hal kadar saturasi
-oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
-Untuk mengetahui kebenaran hipotesis nol, kita perlu menghitung nilai kritikalnya terlebih dahulu
+### c. Tentukanlah apakah terdapat pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴 jika diketahui tingkat signifikansi 𝛼 = 5% serta H0 : “tidak ada pengaruh yang signifikan secara statistika dalam hal kadar saturasi oksigen , sebelum dan sesudah melakukan aktivitas 𝐴” Untuk mengetahui kebenaran hipotesis nol, kita perlu menghitung nilai kritikalnya terlebih dahulu
 ```
 qt(p = 0.025, df = 8, lower.tail = FALSE)
 ```
@@ -164,8 +159,7 @@ Hasil uji <br>
 <img width="471" alt="no5b" src="https://user-images.githubusercontent.com/90702710/170874282-08240d57-8e1e-4353-8ace-9aa33e015236.png">
 <br>
 
-### c. Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk
-setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi)
+### c. Tampilkan tabel dengan mean dan standar deviasi keluaran cahaya untuk setiap perlakuan (kombinasi kaca pelat muka dan suhu operasi)
 Tabel ditampilkan dengan menggunakan `group_by`
 ```
 data_sum <- group_by(GTL, Glass, Temp) %>%
@@ -189,5 +183,4 @@ Hasil uji <br>
 <img width="265" alt="no5d_b" src="https://user-images.githubusercontent.com/90702710/170874445-b44b1b41-fdfe-4026-b2ae-758550b73254.png">
 <br>
 
-### e. Gunakan compact letter display untuk menunjukkan perbedaan signifikan
-antara uji Anova dan uji Tukey
+### e. Gunakan compact letter display untuk menunjukkan perbedaan signifikan antara uji Anova dan uji Tukey
