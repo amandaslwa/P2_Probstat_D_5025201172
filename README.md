@@ -56,7 +56,7 @@ qt(p = 0.025, df = 10.956, lower.tail = FALSE)
 Didapatkan hasil sebagai berikut <br>
 <img width="418" alt="no1c_b" src="https://user-images.githubusercontent.com/90702710/170872535-cf1a9625-e4dc-4fee-b3ce-3dfddb172685.png">
 <br>
-Karena hasil uji statistik (t) terletak di selang nilai kritikal, maka kita dapat menerima hipotesis nol
+Karena hasil uji statistik (t) tidak terletak di selang nilai kritikal, maka kita dapat menolak hipotesis nol
 
 ## 2
 Diketahui bahwa mobil dikemudikan rata-rata lebih dari 20.000 kilometer per tahun.
