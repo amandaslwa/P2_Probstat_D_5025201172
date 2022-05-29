@@ -126,7 +126,7 @@ Hasil uji statistik (t) terletak di selang nilai kritikal, maka kita dapat mener
 ### f. Kesimpulan
 Berdasarkan hasil pengujian, dapat disimpulkan bahwa rata-rata saham Bali dan Bandung bernilai sama
 
-# 5
+## 5
 Data yang digunakan merupakan hasil eksperimen yang dilakukan untuk
 mengetahui pengaruh suhu operasi (100˚C, 125˚C dan 150˚C) dan tiga jenis kaca
 pelat muka (A, B dan C) pada keluaran cahaya tabung osiloskop. Percobaan
@@ -191,10 +191,3 @@ Hasil uji <br>
 
 ### e. Gunakan compact letter display untuk menunjukkan perbedaan signifikan
 antara uji Anova dan uji Tukey
-```
-tukey.cld <- multcompLetters4(anova, tukey)
-print(tukey)
-cld <- as.data.frame.list(tukey.cld$`Glass:Temp_Factor`)
-data_summary$Tukey <- cld$Letters
-print(data_summary)
-```
