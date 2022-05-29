@@ -44,7 +44,7 @@ pengaruh yang signifikan secara statistika dalam hal kadar saturasi
 oksigen , sebelum dan sesudah melakukan aktivitas 𝐴”
 Untuk mengetahui kebenaran hipotesis nol, kita perlu menghitung nilai kritikalnya terlebih dahulu
 ```
-qt(p = 0.025, df = 10.956, lower.tail = FALSE)
+qt(p = 0.025, df = 8, lower.tail = FALSE)
 ```
 Didapatkan hasil sebagai berikut <br>
 <img width="368" alt="no1c_b" src="https://user-images.githubusercontent.com/90702710/170872726-adf164a2-44b1-4531-be2a-51b1b75add1a.png">
