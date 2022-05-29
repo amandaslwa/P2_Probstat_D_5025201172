@@ -58,6 +58,8 @@ zsum.test(mean.x=23500, sigma.x=3900, n.x=100, alternative="greater", mu=20000)
 ```
 Didapatkan hasil sebagai berikut
 <img width="455" alt="no2a" src="https://user-images.githubusercontent.com/90702710/170870211-89c558ca-0964-4172-877f-a359f84cc0a0.png">
+<br>
+Dengan kata lain, kita dapat setuju dengan klaim tersebut
 
 
 ### b. Jelaskan maksud dari output yang dihasilkan!
@@ -112,7 +114,7 @@ Didapatkan hasil sebagai berikut
 
 
 ### e. Keputusan
-Hasil uji statistik terletak di selang nilai kritikal, maka kita dapat menolak hipotesis nol atau sampel tidak memiliki cukup bukti yang bertentangan dengan hipotesis nol
+Hasil uji statistik terletak di selang nilai kritikal, maka kita dapat menerima hipotesis nol
 
 ### f. Kesimpulan
 Berdasarkan hasil pengujian, dapat disimpulkan bahwa rata-rata saham Bali dan Bandung bernilai sama
